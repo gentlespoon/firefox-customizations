@@ -1,7 +1,10 @@
-/*
-Auto collapse tab bar when vertical sidebar (sidebery) is enabled
-*/
+:root {
+  --button-width: 46px;
+}
 
+/*
+ * Auto collapse tab bar when vertical sidebar (sidebery) is enabled
+ */
 #main-window #titlebar {
   transition: height 0.3s 0.3s !important;
 }
@@ -10,17 +13,20 @@ Auto collapse tab bar when vertical sidebar (sidebery) is enabled
 #main-window #titlebar {
   height: 3em !important;
 }
+
 #main-window[uidensity="touch"] #titlebar {
   height: 40px !important;
 }
-/*  */
+
 #main-window[uidensity="compact"] #titlebar {
   height: 40px !important;
 }
+
 /* Hidden state: Hide native tabs strip */
 #main-window[titlepreface*="XXX"] #titlebar {
   height: 0 !important;
 }
+
 /* Hidden state: Fix z-index of active pinned tabs */
 #main-window[titlepreface*="XXX"] #tabbrowser-tabs {
   z-index: 0 !important;
@@ -31,8 +37,8 @@ Auto collapse tab bar when vertical sidebar (sidebery) is enabled
 }
 
 /*
-Decrease size of the sidebar header
-*/
+ * Decrease size of the sidebar header
+ */
 #sidebar-header {
   font-size: 1.2em !important;
   padding: 2px 6px 2px 3px !important;
@@ -48,13 +54,9 @@ Decrease size of the sidebar header
   opacity: 0.6 !important;
 }
 
-/*
-Hide tabline
-*/
-:root {
-  --button-width: 46px;
-}
-
+/**
+ * Hide tabline
+ */
 #navigator-toolbox {
   -moz-window-dragging: drag;
 }
@@ -89,11 +91,11 @@ Hide tabline
   justify-content: space-between;
 }
 
-.titlebar-buttonbox > toolbarbutton {
+.titlebar-buttonbox>toolbarbutton {
   width: var(--button-width);
   height: 32px;
 }
 
-.titlebar-buttonbox > toolbarbutton:hover {
+.titlebar-buttonbox>toolbarbutton:hover {
   transform: scale(1) !important;
 }

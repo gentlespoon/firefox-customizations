@@ -1,0 +1,89 @@
+:root {
+    --button-width: 26px;
+}
+
+/*
+ * Auto collapse tab bar when vertical sidebar (sidebery) is enabled
+ */
+#main-window #titlebar {
+    transition: height 0.3s 0.3s !important;
+}
+
+/* Default state: Set initial height to enable animation */
+#titlebar {
+    height: 44px !important;
+}
+
+/* Hidden state: Hide native tabs strip */
+#main-window[titlepreface*="XXX"] #nav-bar {
+    padding-left: calc(var(--button-width) * 3) !important;
+}
+
+#main-window[titlepreface*="XXX"] #titlebar {
+    height: 0 !important;
+}
+
+#main-window[titlepreface*="XXX"] #tabbrowser-tabs {
+    z-index: 0 !important;
+}
+
+#main-window[titlepreface*="XXX"] .titlebar-buttonbox-container {
+    top: 0;
+}
+
+#main-window[titlepreface*="XXX"] .toolbar-items {
+    display: none;
+}
+
+/*
+ * Decrease size of the sidebar header
+ */
+#sidebar-header {
+    font-size: 1.2em !important;
+    padding: 2px 6px 2px 3px !important;
+}
+
+#sidebar-header #sidebar-close {
+    padding: 3px !important;
+}
+
+#sidebar-header #sidebar-close .toolbarbutton-icon {
+    width: 14px !important;
+    height: 14px !important;
+    opacity: 0.6 !important;
+}
+
+/**
+ * Hide tabline
+ */
+#navigator-toolbox {
+    -moz-window-dragging: drag;
+}
+
+
+#nav-bar {
+    padding: 0 10px !important;
+}
+
+#urlbar {
+    z-index: 200 !important;
+}
+
+.toolbar-items {
+    margin-left: calc(var(--button-width) * 2) !important;
+}
+
+.titlebar-buttonbox-container {
+    position: absolute;
+    width: calc(var(--button-width) * 3) !important;
+    height: 44px !important;
+}
+
+.titlebar-buttonbox>toolbarbutton {
+    width: var(--button-width);
+    height: 32px;
+}
+
+.titlebar-buttonbox>toolbarbutton:hover {
+    transform: scale(1) !important;
+}
